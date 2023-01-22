@@ -1,7 +1,7 @@
 export default function Head() {
   return (
     <>
-      <title>Agway Sports</title>
+      <title>Agway Sports |</title>
       <meta content="width=device-width, initial-scale=1" name="viewport" />
       <meta name="description" content="Agway Sports" />
       <link rel="icon" href="/favicon.ico" />
