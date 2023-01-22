@@ -1,0 +1,5 @@
+nextApp:
+  component: "@sls-next/serverless-component@1.18.0"
+  inputs:
+    domain: "sportspalace.in" # sub-domain defaults to www
+    domainMinimumProtocolVersion: "TLSv1.2_2018" # can be omitted, defaults to "TLSv1.2_2018"
