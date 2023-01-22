@@ -17,6 +17,7 @@ export default function Home() {
 					height={57}
 					priority
 				/>
+				Agway
 			</div>
 		</main>
 	)
