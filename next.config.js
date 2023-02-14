@@ -1,8 +1,5 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  experimental: {
-    appDir: true,
-  },
+module.exports = {
+  basePath: '',
+  distDir: 'build',
+  trailingSlash: true
 }
-
-module.exports = nextConfig
