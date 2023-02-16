@@ -15,11 +15,11 @@ export default function Footer() {
                             <div className="widget">
                                 <h4 className="widget-title">Get to know us</h4>
                                 <ul className="widget-body">
-                                    <li><a href="#" onClick={(e) => e.preventDefault()}>About Riode</a></li>
+                                    <li><a href="#" onClick={(e) => e.preventDefault()}>About Sports Place</a></li>
                                     <li><a href="#" onClick={(e) => e.preventDefault()}>Careers</a></li>
                                     <li><a href="#" onClick={(e) => e.preventDefault()}>Affiliate Program</a></li>
                                     <li><a href="#" onClick={(e) => e.preventDefault()}>Show Hosts</a></li>
-                                    <li><a href="#" onClick={(e) => e.preventDefault()}>Riode Cares</a></li>
+                                    <li><a href="#" onClick={(e) => e.preventDefault()}>Sports Place Cares</a></li>
                                     <li><a href="#" onClick={(e) => e.preventDefault()}>Submit Your Product</a></li>
                                 </ul>
                             </div>
@@ -68,7 +68,7 @@ export default function Footer() {
             </div>
             <div className="footer-bottom">
                 <div className="container">
-                    <p className="copyright text-center w-100">Riode eCommerce &copy; 2021. All Rights Reserved</p>
+                    <p className="copyright text-center w-100">Sports Place eCommerce &copy; 2023. All Rights Reserved</p>
                 </div>
             </div>
         </footer>

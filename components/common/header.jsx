@@ -28,11 +28,11 @@ export default function Header(props) {
                         </ALink>
                         <nav className="main-nav main-nav-1">
                             <ul className="menu">
-                                <li><ALink href={{ pathname: "/shop", query: { category: "electronic" } }} className={`${query.category === 'electronic' ? 'active' : ''}`}>Electronic</ALink></li>
-                                <li><ALink href={{ pathname: "/shop", query: { category: "computer" } }} className={`${query.category === 'computer' ? 'active' : ''}`}>Computer</ALink></li>
-                                <li><ALink href={{ pathname: "/shop", query: { category: "tv-and-watches" } }} className={`${query.category === 'tv-and-watches' ? 'active' : ''}`}>TV & Watches</ALink></li>
-                                <li><ALink href={{ pathname: "/shop", query: { category: "smart-phone" } }} className={`${query.category === 'smart-phone' ? 'active' : ''}`}>Smart Home</ALink></li>
-                                <li><ALink href={{ pathname: "/shop", query: { category: "appliances" } }} className={`${query.category === 'appliances' ? 'active' : ''}`}>Appliances</ALink></li>
+                                <li><ALink href="/" className={'active'}>Home</ALink></li>
+                                <li><ALink href={{ pathname: "/shop", query: { category: "computer" } }} className={`${query.category === 'computer' ? 'active' : ''}`}>Badminton</ALink></li>
+                                <li><ALink href={{ pathname: "/shop", query: { category: "tv-and-watches" } }} className={`${query.category === 'tv-and-watches' ? 'active' : ''}`}>Tennis</ALink></li>
+                                <li><ALink href={{ pathname: "/shop", query: { category: "smart-phone" } }} className={`${query.category === 'smart-phone' ? 'active' : ''}`}>Brand</ALink></li>
+                                <li><ALink href={{ pathname: "/shop", query: { category: "appliances" } }} className={`${query.category === 'appliances' ? 'active' : ''}`}>Category</ALink></li>
                             </ul>
                         </nav>
                     </div>
@@ -46,8 +46,9 @@ export default function Header(props) {
                     <div className="header-right">
                         <nav className="main-nav main-nav-2">
                             <ul className="menu">
+                                <li><ALink href={{ pathname: "/shop", query: { category: "accessories" } }} className={`${query.category === 'accessories' ? 'active' : ''}`}>Accessories
+                                </ALink></li>
                                 <li><ALink href={{ pathname: "/shop", query: { category: "deals" } }} className={`${query.category === 'deals' ? 'active' : ''}`}>Hot Deals</ALink></li>
-                                <li><ALink href={{ pathname: "/shop", query: { category: "book" } }} className={`${query.category === 'book' ? 'active' : ''}`}>Look book</ALink></li>
                                 <li><ALink href="/pages/contact-us">Contact</ALink></li>
                                 <li><ALink href="/blog/classic">Blog</ALink></li>
                             </ul>
