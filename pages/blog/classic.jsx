@@ -81,7 +81,7 @@ function Classic() {
                                                         <PostOne post={post} />
                                                     </React.Fragment>
                                                 )) :
-                                                <div className="info-box with-icon"><p className="mt-4">No blogs were found matching your selection.</p></div>
+                                                <div className="info-box with-icon"><p className="mt-4">No blogs were found matching your  selection.</p></div>
                                             : ''
                                 }
                             </div>
