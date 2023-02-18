@@ -3,7 +3,7 @@ import { useQuery } from '@apollo/react-hooks';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import Helmet from 'react-helmet';
 
-import withApollo from '~/server/apollo';
+// import withApollo from '~/server/apollo';
 import { GET_POST } from '~/server/queries';
 
 import ALink from '~/components/features/custom-link';
@@ -20,14 +20,14 @@ import { videoHandler } from '~/utils';
 function PostSingle() {
     const slug = useRouter().query.slug;
 
-    if ( !slug ) return '';
+    if (!slug) return '';
 
-    const { data, loading, error } = useQuery( GET_POST, { variables: { slug } } );
+    const { data, loading, error } = useQuery(GET_POST, { variables: { slug } });
     const post = data && data.post.data;
 
     const related = data && data.post.related;
 
-    if ( error ) return <ErrorPage />;
+    if (error) return <ErrorPage />;
 
     return (
         <main className="main skeleton-body">
@@ -55,56 +55,56 @@ function PostSingle() {
                                 loading ?
                                     <div className="skel-post"></div>
                                     :
-                                    <div className={ `post post-single ${ post.type === 'video' ? 'post-video' : '' }` }>
+                                    <div className={`post post-single ${post.type === 'video' ? 'post-video' : ''}`}>
                                         {
                                             post.type === 'image' || post.type === 'video' ?
                                                 <figure className="post-media">
                                                     <ALink href="#">
                                                         <LazyLoadImage
-                                                            src={ process.env.NEXT_PUBLIC_ASSET_URI + post.large_picture[ 0 ].url }
+                                                            src={process.env.NEXT_PUBLIC_ASSET_URI + post.large_picture[0].url}
                                                             alt="post image"
                                                             width="900"
-                                                            height={ 500 }
-                                                            style={ { backgroundColor: "#DEE6E8" } }
+                                                            height={500}
+                                                            style={{ backgroundColor: "#DEE6E8" }}
                                                         />
                                                     </ALink>
                                                     {
                                                         post.type === 'video' ?
                                                             <>
-                                                                <span className="video-play" onClick={ videoHandler }></span>
+                                                                <span className="video-play" onClick={videoHandler}></span>
                                                                 <video width="380">
-                                                                    <source src={ process.env.NEXT_PUBLIC_ASSET_URI + post.video.url } type="video/mp4" />
+                                                                    <source src={process.env.NEXT_PUBLIC_ASSET_URI + post.video.url} type="video/mp4" />
                                                                 </video>
                                                             </>
                                                             : ''
                                                     }
                                                 </figure> :
                                                 <figure className="post-media">
-                                                    <OwlCarousel adClass="owl-theme owl-dot-inner owl-dot-white gutter-no" options={ mainSlider20 }>
+                                                    <OwlCarousel adClass="owl-theme owl-dot-inner owl-dot-white gutter-no" options={mainSlider20}>
                                                         {
-                                                            post.picture.map( ( item, index ) =>
+                                                            post.picture.map((item, index) =>
                                                                 <img
-                                                                    src={ process.env.NEXT_PUBLIC_ASSET_URI + item.url }
+                                                                    src={process.env.NEXT_PUBLIC_ASSET_URI + item.url}
                                                                     alt="post gallery"
-                                                                    key={ item.title + '-' + index }
-                                                                    width={ item.width }
-                                                                    height={ item.height }
-                                                                    style={ { backgroundColor: "#DEE6E8" } }
+                                                                    key={item.title + '-' + index}
+                                                                    width={item.width}
+                                                                    height={item.height}
+                                                                    style={{ backgroundColor: "#DEE6E8" }}
                                                                 />
-                                                            ) }
+                                                            )}
                                                     </OwlCarousel>
                                                 </figure>
                                         }
 
                                         <div className="post-details">
                                             <div className="post-meta">
-                                                by <ALink href="#" className="post-author">{ post.author }</ALink> on <ALink href="#" className="post-date">{ new Date( post.date ).toLocaleDateString( 'en-US', { year: 'numeric', month: 'short', day: "2-digit", timeZone: "UTC" } ) }</ALink> | <ALink href="#" className="post-comment"><span>{ post.comments }</span> Comments</ALink>
+                                                by <ALink href="#" className="post-author">{post.author}</ALink> on <ALink href="#" className="post-date">{new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: "2-digit", timeZone: "UTC" })}</ALink> | <ALink href="#" className="post-comment"><span>{post.comments}</span> Comments</ALink>
                                             </div>
                                             <h4 className="post-title">
-                                                <ALink href="#">{ post.title }</ALink>
+                                                <ALink href="#">{post.title}</ALink>
                                             </h4>
                                             <div className="post-body mb-7">
-                                                <p className="mb-5">{ post.content }</p>
+                                                <p className="mb-5">{post.content}</p>
 
                                                 <p className="mb-6">Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est. Sed lectus. Praesent elementum hendrerit tortor. Sed semper lorem at felis. Vestibulum volutpat, lacus a <ALink href="#">ultrices sagittis</ALink>, mi neque euismod dui, eu pulvinar nunc sapien ornare nisl. Phasellus pede arcu, dapibus eu, fermentum et, dapibus sed, urna.</p>
 
@@ -114,11 +114,11 @@ function PostSingle() {
                                                             <LazyLoadImage
                                                                 src="./images/blog/1.jpg"
                                                                 alt="post single image"
-                                                                width={ 336 }
-                                                                height={ 415 }
+                                                                width={336}
+                                                                height={415}
                                                                 effect="opacity"
                                                                 className="float-left"
-                                                                style={ { backgroundColor: "#DEE6E8" } }
+                                                                style={{ backgroundColor: "#DEE6E8" }}
                                                             />
                                                             <figcaption className="text-left mt-1">
                                                                 Designe by <ALink href="#">Casper Dalin</ALink>
@@ -145,11 +145,11 @@ function PostSingle() {
                                                 </blockquote>
 
                                                 <p>Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est. Sed
-                                                lectus. Praesent elementum hendrerit tortor. Sed semper lorem at felis.
-                                                Vestibulum volutpat, lacus a ultrices sagittis, mi neque euismod dui, eu
-                                                pulvinar nunc sapien ornare nisl. Phasellus pede arcu, dapibus eu, fermentum
-                                                et, dapibus sed, urna. Morbi interdum mollis sapien. Sed ac risus. Phasellus
-                                                lacinia, magna a ullamcorper laoreet, lectus arcu pulvinar risus, vitae
+                                                    lectus. Praesent elementum hendrerit tortor. Sed semper lorem at felis.
+                                                    Vestibulum volutpat, lacus a ultrices sagittis, mi neque euismod dui, eu
+                                                    pulvinar nunc sapien ornare nisl. Phasellus pede arcu, dapibus eu, fermentum
+                                                    et, dapibus sed, urna. Morbi interdum mollis sapien. Sed ac risus. Phasellus
+                                                    lacinia, magna a ullamcorper laoreet, lectus arcu pulvinar risus, vitae
                                                     facilisis libero dolor a purus. </p>
                                             </div>
 
@@ -173,7 +173,7 @@ function PostSingle() {
                                                     </div>
                                                     <div className="author-content">
                                                         <p className="mb-0">Praesent dapibus, neque id cursus faucibus, tortor neque
-                                                        egestas auguae, eu vulputate magna eros euerat. Aliquam erat
+                                                            egestas auguae, eu vulputate magna eros euerat. Aliquam erat
                                                             volutpat.</p>
                                                     </div>
                                                 </div>
@@ -196,27 +196,27 @@ function PostSingle() {
                             {
                                 loading ? '' :
                                     <nav className="page-nav">
-                                        <ALink className="pager-link pager-link-prev" href={ `/blog/single/${ related[ 0 ].slug }` }>
+                                        <ALink className="pager-link pager-link-prev" href={`/blog/single/${related[0].slug}`}>
                                             Previous Post
-                                            <span className="pager-link-title">{ related[ 0 ].title }</span>
+                                            <span className="pager-link-title">{related[0].title}</span>
                                         </ALink>
-                                        <ALink className="pager-link pager-link-next" href={ `/blog/single/${ related[ related.length - 1 ].slug }` }>
+                                        <ALink className="pager-link pager-link-next" href={`/blog/single/${related[related.length - 1].slug}`}>
                                             Go To Post
-                                            <span className="pager-link-title">{ related[ related.length - 1 ].title }</span>
+                                            <span className="pager-link-title">{related[related.length - 1].title}</span>
                                         </ALink>
                                     </nav>
                             }
 
-                            <RelatedPosts posts={ related } loading={ loading } />
+                            <RelatedPosts posts={related} loading={loading} />
 
                             {
                                 loading ? '' :
                                     <div className="comments">
-                                        <h3 className="title title-simple text-left text-normal font-weight-bold">{ post.comments } Comments</h3>
+                                        <h3 className="title title-simple text-left text-normal font-weight-bold">{post.comments} Comments</h3>
 
                                         {
                                             post.comments > 0 ? '' :
-                                                <h3 className="title title-simple text-left text-normal font-weight-normal" style={ { fontSize: "1.8rem" } }>
+                                                <h3 className="title title-simple text-left text-normal font-weight-normal" style={{ fontSize: "1.8rem" }}>
                                                     {
                                                         "Be The First To Review “" + post.title + "”"
                                                     }
@@ -329,4 +329,4 @@ function PostSingle() {
     )
 }
 
-export default withApollo( { ssr: typeof window === 'undefined' } )( PostSingle );
+export default withApollo({ ssr: typeof window === 'undefined' })(PostSingle);

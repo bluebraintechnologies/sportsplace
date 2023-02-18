@@ -4,7 +4,7 @@ import { useLazyQuery } from '@apollo/react-hooks';
 import { useRouter } from 'next/router';
 
 // Import Apollo Server and Query
-import withApollo from '~/server/apollo';
+// import withApollo from '~/server/apollo';
 import { GET_POSTS } from '~/server/queries';
 
 import ALink from '~/components/features/custom-link';
@@ -17,32 +17,32 @@ import { scrollTopHandler } from '~/utils';
 
 function Listing() {
     const router = useRouter();
-    const [ isFirst, setFirst ] = useState( true );
+    const [isFirst, setFirst] = useState(true);
     const query = router.query;
     const showingCount = 8;
-    const [ getPosts, { data, loading, error } ] = useLazyQuery( GET_POSTS );
+    const [getPosts, { data, loading, error }] = useLazyQuery(GET_POSTS);
     const perPage = showingCount;
     const posts = data && data.posts.data;
-    const totalPage = data ? parseInt( data.posts.total / perPage ) + ( data.posts.total % perPage ? 1 : 0 ) : 1;
+    const totalPage = data ? parseInt(data.posts.total / perPage) + (data.posts.total % perPage ? 1 : 0) : 1;
     let page = query.page ? query.page : 1;
 
-    useEffect( () => {
-        getPosts( {
+    useEffect(() => {
+        getPosts({
             variables: {
                 category: query.category,
-                from: perPage * ( page - 1 ),
+                from: perPage * (page - 1),
                 to: perPage * page
             }
-        } );
+        });
 
-        setTimeout( () => {
-            if ( isFirst ) {
-                setFirst( false );
+        setTimeout(() => {
+            if (isFirst) {
+                setFirst(false);
             } else {
                 scrollTopHandler();
             }
-        }, 100 );
-    }, [ query ] )
+        }, 100);
+    }, [query])
 
     return (
         <main className="main skeleton-body">
@@ -69,24 +69,24 @@ function Listing() {
                             <div className="posts">
                                 {
                                     loading ?
-                                        new Array( parseInt( perPage ) ).fill( 1 ).map( ( item, index ) => (
-                                            <div key={ "Skeleton:" + index }>
+                                        new Array(parseInt(perPage)).fill(1).map((item, index) => (
+                                            <div key={"Skeleton:" + index}>
                                                 <div className="skel-post-list mb-4"></div>
                                             </div>
-                                        ) ) :
+                                        )) :
                                         posts ?
                                             posts.length ?
-                                                posts.slice( 0, posts.length ).map( ( post, index ) => (
-                                                    <React.Fragment key={ "post-one" + index }>
-                                                        <PostThree post={ post } />
+                                                posts.slice(0, posts.length).map((post, index) => (
+                                                    <React.Fragment key={"post-one" + index}>
+                                                        <PostThree post={post} />
                                                     </React.Fragment>
-                                                ) ) :
+                                                )) :
                                                 <div className="info-box with-icon"><p className="mt-4">No blogs were found matching your selection.</p></div>
                                             : ''
                                 }
                             </div>
 
-                            <Pagination totalPage={ totalPage } />
+                            <Pagination totalPage={totalPage} />
                         </div>
 
                         <BlogSidebar />
@@ -97,4 +97,4 @@ function Listing() {
     )
 }
 
-export default withApollo( { ssr: typeof window === "undefined" } )( Listing );
+export default withApollo({ ssr: typeof window === "undefined" })(Listing);

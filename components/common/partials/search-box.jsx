@@ -6,7 +6,7 @@ import { LazyLoadImage } from 'react-lazy-load-image-component';
 import ALink from '~/components/features/custom-link';
 
 import { GET_PRODUCTS } from '~/server/queries';
-import withApollo from '~/server/apollo';
+// import withApollo from '~/server/apollo';
 
 import { toDecimal } from '~/utils';
 
@@ -133,4 +133,4 @@ function SearchForm() {
     );
 }
 
-export default withApollo({ ssr: typeof window === 'undefined' })(SearchForm);
+//export default withApollo({ ssr: typeof window === 'undefined' })(SearchForm);

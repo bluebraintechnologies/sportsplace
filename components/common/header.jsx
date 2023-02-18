@@ -4,7 +4,7 @@ import { useRouter } from 'next/router';
 import ALink from '~/components/features/custom-link';
 
 import CartMenu from '~/components/common/partials/cart-menu';
-import SearchBox from '~/components/common/partials/search-box';
+//import SearchBox from '~/components/common/partials/search-box';
 import LoginModal from '~/components/features/modals/login-modal';
 
 import { headerBorderRemoveList } from '~/utils/data/menu'
@@ -54,7 +54,7 @@ export default function Header(props) {
                             </ul>
                         </nav>
 
-                        <SearchBox />
+                        {/* <SearchBox /> */}
 
                         <LoginModal />
 

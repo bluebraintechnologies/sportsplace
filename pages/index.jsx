@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet';
 import { useQuery } from "@apollo/react-hooks";
 
 // Import Apollo Server and Query
-import withApollo from '../server/apollo';
+//import withApollo from '../server/apollo';
 import { GET_HOME_DATA } from '../server/queries';
 
 // import Home Components
@@ -58,4 +58,4 @@ function HomePage() {
     )
 }
 
-export default withApollo({ ssr: typeof window === 'undefined' })(HomePage);
+export default HomePage; // ''withApollo({ ssr: typeof window === 'undefined' })(HomePage);

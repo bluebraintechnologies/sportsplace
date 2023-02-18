@@ -7,7 +7,7 @@ import ProductNine from '~/components/features/product/product-nine';
 import ProductEight from '~/components/features/product/product-eight';
 import Pagination from '~/components/features/pagination';
 
-import withApollo from '~/server/apollo';
+// import withApollo from '~/server/apollo';
 import { GET_PRODUCTS } from '~/server/queries';
 
 function ProductListOne(props) {
