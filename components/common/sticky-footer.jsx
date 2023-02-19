@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 
 import ALink from '~/components/features/custom-link';
+import Image from 'next/image';
 
 //import FooterSearchBox from '~/components/common/partials/footer-search-box';
 

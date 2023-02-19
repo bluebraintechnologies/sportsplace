@@ -5,6 +5,7 @@ import ALink from '~/components/features/custom-link';
 import { cartActions } from '~/store/cart';
 
 import { getTotalPrice, getCartCount, toDecimal } from '~/utils';
+import Image from 'next/image';
 
 function CartMenu(props) {
     const { cartList, removeFromCart } = props;
@@ -39,7 +40,7 @@ function CartMenu(props) {
                                         <div className="product product-cart" key={'cart-menu-product-' + index}>
                                             <figure className="product-media pure-media">
                                                 <ALink href={'/product/default/' + item.slug}>
-                                                    <img src={process.env.NEXT_PUBLIC_ASSET_URI + item.pictures[0].url} alt="product" width="80"
+                                                    <Image src={process.env.NEXT_PUBLIC_ASSET_URI + item.pictures[0].url} alt="product" width="80"
                                                         height="88" />
                                                 </ALink>
                                                 <button className="btn btn-link btn-close" onClick={() => { removeCart(item) }}>

@@ -7,6 +7,8 @@ import Quantity from '~/components/features/quantity';
 import { cartActions } from '~/store/cart';
 
 import { toDecimal, getTotalPrice } from '~/utils';
+import Image from 'next/image';
+
 
 function Cart(props) {
     const { cartList, removeFromCart, updateCart } = props;
@@ -68,7 +70,7 @@ function Cart(props) {
                                                             <td className="product-thumbnail">
                                                                 <figure>
                                                                     <ALink href={'/product/default/' + item.slug}>
-                                                                        <img src={process.env.NEXT_PUBLIC_ASSET_URI + item.pictures[0].url} width="100" height="100"
+                                                                        <Image src={process.env.NEXT_PUBLIC_ASSET_URI + item.pictures[0].url} width="100" height="100"
                                                                             alt="product" />
                                                                     </ALink>
                                                                 </figure>
@@ -105,7 +107,7 @@ function Cart(props) {
                                                 onClick={update}
                                             >
                                                 Update Cart
-                                </button>
+                                            </button>
                                         </div>
                                         <div className="cart-coupon-box mb-8">
                                             <h4 className="title coupon-title text-uppercase ls-m">Coupon Discount</h4>
@@ -142,7 +144,7 @@ function Cart(props) {
                                                                         <div className="custom-radio">
                                                                             <input type="radio" id="free-shipping" name="shipping" className="custom-control-input" />
                                                                             <label className="custom-control-label" htmlFor="free-shipping">Free
-																shipping</label>
+                                                                                shipping</label>
                                                                         </div>
                                                                     </li>
 

@@ -24,7 +24,7 @@ function BlogPosts() {
 
     useEffect(() => {
         getPosts();
-    }, [])
+    }, [getPosts])
 
     return (
         <main className="main skeleton-body">

@@ -3,10 +3,11 @@ import { useRouter } from 'next/router';
 import { useQuery } from '@apollo/react-hooks';
 import InputRange from 'react-input-range';
 
-
 import ALink from '~/components/features/custom-link';
 import Card from '~/components/features/accordion/card';
 import OwlCarousel from '~/components/features/owl-carousel';
+
+import SmallProduct from '~/components/features/product/product-sm';
 
 import withApollo from '../../../../server/apollo';
 import { GET_SHOP_SIDEBAR_DATA } from '../../../../server/queries';

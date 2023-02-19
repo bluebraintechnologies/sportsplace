@@ -19,7 +19,7 @@ const App = ({ Component, pageProps }) => {
         if (store.getState().demo.current !== currentDemo) {
             store.dispatch(demoActions.refreshStore(currentDemo));
         }
-    }, [])
+    }, [store])
 
     return (
         <Provider store={store}>

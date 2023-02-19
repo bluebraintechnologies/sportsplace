@@ -8,7 +8,7 @@ import ElementsList from '~/components/partials/elements/elements-list';
 
 
 
-function Alert( props ) {
+function Alert(props) {
     return (
         <>
             <Helmet>
@@ -24,7 +24,7 @@ function Alert( props ) {
             />
 
             <div className="page-content">
-                <div className="container">
+                {/* <div className="container">
                     <section className="mt-10 pt-4">
                         <h2 className="title title-center mb-5">Simple</h2>
 
@@ -382,7 +382,7 @@ function Alert( props ) {
                         </div>
                     </section>
 
-                </div>
+                </div> */}
 
                 <ElementsList adClass="mt-10" />
             </div>
@@ -390,4 +390,4 @@ function Alert( props ) {
     )
 }
 
-export default React.memo( Alert );
+export default React.memo(Alert);

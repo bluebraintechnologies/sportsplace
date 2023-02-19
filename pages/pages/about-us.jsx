@@ -9,25 +9,26 @@ import OwlCarousel from '~/components/features/owl-carousel';
 
 import { fadeIn, fadeInLeftShorter } from '~/utils/data/keyframes';
 import { mainSlider16 } from '~/utils/data/carousel';
+import Image from 'next/image';
 
 function AboutUs() {
-    useEffect( () => {
+    useEffect(() => {
         countToHandler();
-        window.addEventListener( 'scroll', countToHandler, true );
+        window.addEventListener('scroll', countToHandler, true);
 
         return () => {
-            window.removeEventListener( 'scroll', countToHandler );
+            window.removeEventListener('scroll', countToHandler);
         }
-    }, [] )
+    }, [])
 
     function countToHandler() {
-        let items = document.querySelectorAll( '.count-to' );
+        let items = document.querySelectorAll('.count-to');
 
-        for ( let i = 0; i < items.length; i++ ) {
-            let item = items[ i ];
-            if ( item.getBoundingClientRect().top > 0 && window.innerHeight - item.offsetHeight > item.getBoundingClientRect().top && !item.classList.contains( 'finished' ) ) {
-                if ( item.querySelector( 'button' ) ) item.querySelector( 'button' ).click();
-                item.classList.add( 'finished' );
+        for (let i = 0; i < items.length; i++) {
+            let item = items[i];
+            if (item.getBoundingClientRect().top > 0 && window.innerHeight - item.offsetHeight > item.getBoundingClientRect().top && !item.classList.contains('finished')) {
+                if (item.querySelector('button')) item.querySelector('button').click();
+                item.classList.add('finished');
             }
         }
     }
@@ -49,14 +50,14 @@ function AboutUs() {
                 </div>
             </nav>
             <div className="page-header pl-4 pr-4"
-                style={ { backgroundImage: `url( ./images/page-header/about-us.jpg )`, backgroundColor: "#3C63A4" } }>
+                style={{ backgroundImage: `url( ./images/page-header/about-us.jpg )`, backgroundColor: "#3C63A4" }}>
                 <h3 className="page-subtitle font-weight-bold">Welcome to Riode</h3>
                 <h1 className="page-title font-weight-bold lh-1 text-white text-capitalize">Our Services</h1>
                 <p className="page-desc text-white mb-0">Lorem quis bibendum auctor, nisi elit consequat ipsum,<br /> nec sagittis sem nibh id elit.</p>
             </div>
 
             <div className="page-content mt-10 pt-10">
-                <Reveal keyframes={ fadeIn } delay="50" duration="1000" triggerOnce>
+                <Reveal keyframes={fadeIn} delay="50" duration="1000" triggerOnce>
                     <section className="about-section pb-10">
                         <div className="container">
                             <div className="row align-items-center">
@@ -70,13 +71,13 @@ function AboutUs() {
                                     <div className="row">
                                         <div className="col-md-4 mb-4">
                                             <div className="counter text-center text-dark">
-                                                <CountUp start={ 0 } end={ 35 } duration={ 4 }>
-                                                    { ( { countUpRef, start } ) => (
+                                                <CountUp start={0} end={35} duration={4}>
+                                                    {({ countUpRef, start }) => (
                                                         <div className="count-to">
-                                                            <span ref={ countUpRef } />
-                                                            <button onClick={ start } className="d-none">Start</button>
+                                                            <span ref={countUpRef} />
+                                                            <button onClick={start} className="d-none">Start</button>
                                                         </div>
-                                                    ) }
+                                                    )}
                                                 </CountUp>
                                                 <h5 className="count-title font-weight-bold text-body ls-md">Business Year</h5>
                                                 <p className="text-grey mb-0">Lorem ipsum dolor sit<br />amet, conctetur adipisci elit. viverra erat orci.</p>
@@ -84,13 +85,13 @@ function AboutUs() {
                                         </div>
                                         <div className="col-md-4 mb-4">
                                             <div className="counter text-center text-dark">
-                                                <CountUp start={ 0 } end={ 50 } duration={ 4 }>
-                                                    { ( { countUpRef, start } ) => (
+                                                <CountUp start={0} end={50} duration={4}>
+                                                    {({ countUpRef, start }) => (
                                                         <div className="count-to">
-                                                            <span ref={ countUpRef } />
-                                                            <button onClick={ start } className="d-none">Start</button>
+                                                            <span ref={countUpRef} />
+                                                            <button onClick={start} className="d-none">Start</button>
                                                         </div>
-                                                    ) }
+                                                    )}
                                                 </CountUp>
                                                 <h5 className="count-title font-weight-bold text-body ls-md">Design Brands</h5>
                                                 <p className="text-grey mb-0">Lorem ipsum dolor sit<br />amet, conctetur adipisci elit. viverra erat orci.</p>
@@ -98,13 +99,13 @@ function AboutUs() {
                                         </div>
                                         <div className="col-md-4 mb-4">
                                             <div className="counter text-center text-dark">
-                                                <CountUp start={ 0 } end={ 130 } duration={ 4 }>
-                                                    { ( { countUpRef, start } ) => (
+                                                <CountUp start={0} end={130} duration={4}>
+                                                    {({ countUpRef, start }) => (
                                                         <div className="count-to">
-                                                            <span ref={ countUpRef } />
-                                                            <button onClick={ start } className="d-none">Start</button>
+                                                            <span ref={countUpRef} />
+                                                            <button onClick={start} className="d-none">Start</button>
                                                         </div>
-                                                    ) }
+                                                    )}
                                                 </CountUp>
                                                 <h5 className="count-title font-weight-bold text-body ls-md">Team Members</h5>
                                                 <p className="text-grey mb-0">Lorem ipsum dolor sit<br />amet, conctetur adipisci elit. viverra erat orci.</p>
@@ -117,7 +118,7 @@ function AboutUs() {
                     </section>
                 </Reveal>
 
-                <Reveal keyframes={ fadeIn } delay="50" duration="1000" triggerOnce>
+                <Reveal keyframes={fadeIn} delay="50" duration="1000" triggerOnce>
                     <section className="customer-section pb-10">
                         <div className="container">
                             <div className="row align-items-center">
@@ -130,7 +131,7 @@ function AboutUs() {
                                             height="507"
                                             effect="opacity"
                                             className="banner-radius"
-                                            style={ { backgroundColor: "#BDD0DE" } }
+                                            style={{ backgroundColor: "#BDD0DE" }}
                                         />
                                     </figure>
                                 </div>
@@ -149,7 +150,7 @@ function AboutUs() {
                     </section>
                 </Reveal>
 
-                <Reveal keyframes={ fadeIn } delay="50" duration="1000" triggerOnce>
+                <Reveal keyframes={fadeIn} delay="50" duration="1000" triggerOnce>
                     <section className="store-section pb-10">
                         <div className="container">
                             <div className="row align-items-center">
@@ -173,7 +174,7 @@ function AboutUs() {
                                             height="507"
                                             effect="opacity"
                                             className="banner-radius"
-                                            style={ { backgroundColor: "#DEE6E8" } }
+                                            style={{ backgroundColor: "#DEE6E8" }}
                                         />
                                     </figure>
                                 </div>
@@ -182,52 +183,52 @@ function AboutUs() {
                     </section>
                 </Reveal>
 
-                <Reveal keyframes={ fadeIn } delay="50" duration="1000" triggerOnce>
+                <Reveal keyframes={fadeIn} delay="50" duration="1000" triggerOnce>
                     <section className="brand-section grey-section pt-10 pb-10">
                         <div className="container mt-8 mb-10">
                             <h5 className="section-subtitle lh-2 ls-md font-weight-normal mb-1 text-center">04. Our Clients</h5>
                             <h3 className="section-title lh-1 font-weight-bold text-center mb-5">Popular Brands</h3>
 
-                            <OwlCarousel adClass="owl-theme" options={ mainSlider16 }>
+                            <OwlCarousel adClass="owl-theme" options={mainSlider16}>
                                 <figure className="brand-wrap bg-white banner-radius">
-                                    <img src="./images/brands/1.png" alt="Brand" width="180" height="100" />
+                                    <Image src="./images/brands/1.png" alt="Brand" width="180" height="100" />
                                 </figure>
                                 <figure className="brand-wrap bg-white banner-radius">
-                                    <img src="./images/brands/2.png" alt="Brand" width="180" height="100" />
+                                    <Image src="./images/brands/2.png" alt="Brand" width="180" height="100" />
                                 </figure>
                                 <figure className="brand-wrap bg-white banner-radius">
-                                    <img src="./images/brands/3.png" alt="Brand" width="180" height="100" />
+                                    <Image src="./images/brands/3.png" alt="Brand" width="180" height="100" />
                                 </figure>
                                 <figure className="brand-wrap bg-white banner-radius">
-                                    <img src="./images/brands/4.png" alt="Brand" width="180" height="100" />
+                                    <Image src="./images/brands/4.png" alt="Brand" width="180" height="100" />
                                 </figure>
                                 <figure className="brand-wrap bg-white banner-radius">
-                                    <img src="./images/brands/5.png" alt="Brand" width="180" height="100" />
+                                    <Image src="./images/brands/5.png" alt="Brand" width="180" height="100" />
                                 </figure>
                                 <figure className="brand-wrap bg-white banner-radius">
-                                    <img src="./images/brands/6.png" alt="Brand" width="180" height="100" />
+                                    <Image src="./images/brands/6.png" alt="Brand" width="180" height="100" />
                                 </figure>
                             </OwlCarousel>
                         </div>
                     </section>
                 </Reveal>
 
-                <Reveal keyframes={ fadeIn } delay="50" duration="1000" triggerOnce>
+                <Reveal keyframes={fadeIn} delay="50" duration="1000" triggerOnce>
                     <section className="team-section pt-8 mt-10 pb-10 mb-6">
                         <div className="container">
                             <h5 className="section-subtitle lh-2 ls-md font-weight-normal mb-1 text-center">05. Our Leaders</h5>
                             <h3 className="section-title lh-1 font-weight-bold text-center mb-5">Meet our team</h3>
                             <div className="row cols-sm-2 cols-md-4">
-                                <Reveal keyframes={ fadeInLeftShorter } delay="20" duration="1000" triggerOnce>
+                                <Reveal keyframes={fadeInLeftShorter} delay="20" duration="1000" triggerOnce>
                                     <div className="member">
                                         <figure className="banner-radius">
                                             <LazyLoadImage
                                                 src="./images/subpages/team1.jpg"
                                                 alt="Oteam member"
-                                                width={ 280 }
-                                                height={ 280 }
+                                                width={280}
+                                                height={280}
                                                 effect="opacity"
-                                                style={ { backgroundColor: "#EEE" } }
+                                                style={{ backgroundColor: "#EEE" }}
                                             />
 
                                             <div className="overlay social-links">
@@ -242,16 +243,16 @@ function AboutUs() {
                                     </div>
                                 </Reveal>
 
-                                <Reveal keyframes={ fadeInLeftShorter } delay="30" duration="1000" triggerOnce>
+                                <Reveal keyframes={fadeInLeftShorter} delay="30" duration="1000" triggerOnce>
                                     <div className="member">
                                         <figure className="banner-radius">
                                             <LazyLoadImage
                                                 src="./images/subpages/team2.jpg"
                                                 alt="Oteam member"
-                                                width={ 280 }
-                                                height={ 280 }
+                                                width={280}
+                                                height={280}
                                                 effect="opacity"
-                                                style={ { backgroundColor: "#EEE" } }
+                                                style={{ backgroundColor: "#EEE" }}
                                             />
 
                                             <div className="overlay social-links">
@@ -266,16 +267,16 @@ function AboutUs() {
                                     </div>
                                 </Reveal>
 
-                                <Reveal keyframes={ fadeInLeftShorter } delay="40" duration="1000" triggerOnce>
+                                <Reveal keyframes={fadeInLeftShorter} delay="40" duration="1000" triggerOnce>
                                     <div className="member">
                                         <figure className="banner-radius">
                                             <LazyLoadImage
                                                 src="./images/subpages/team3.jpg"
                                                 alt="Oteam member"
-                                                width={ 280 }
-                                                height={ 280 }
+                                                width={280}
+                                                height={280}
                                                 effect="opacity"
-                                                style={ { backgroundColor: "#EEE" } }
+                                                style={{ backgroundColor: "#EEE" }}
                                             />
 
                                             <div className="overlay social-links">
@@ -290,16 +291,16 @@ function AboutUs() {
                                     </div>
                                 </Reveal>
 
-                                <Reveal keyframes={ fadeInLeftShorter } delay="50" duration="1000" triggerOnce>
+                                <Reveal keyframes={fadeInLeftShorter} delay="50" duration="1000" triggerOnce>
                                     <div className="member">
                                         <figure className="banner-radius">
                                             <LazyLoadImage
                                                 src="./images/subpages/team4.jpg"
                                                 alt="Oteam member"
-                                                width={ 280 }
-                                                height={ 280 }
+                                                width={280}
+                                                height={280}
                                                 effect="opacity"
-                                                style={ { backgroundColor: "#EEE" } }
+                                                style={{ backgroundColor: "#EEE" }}
                                             />
 
                                             <div className="overlay social-links">
@@ -323,4 +324,4 @@ function AboutUs() {
 
 }
 
-export default React.memo( AboutUs );
+export default React.memo(AboutUs);

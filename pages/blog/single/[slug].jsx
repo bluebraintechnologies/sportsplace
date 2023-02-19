@@ -16,6 +16,7 @@ import RelatedPosts from '~/components/partials/post/related-posts';
 
 import { mainSlider20 } from '~/utils/data/carousel';
 import { videoHandler } from '~/utils';
+import Image from 'next/image';
 
 function PostSingle() {
     const slug = useRouter().query.slug;
@@ -83,7 +84,7 @@ function PostSingle() {
                                                     <OwlCarousel adClass="owl-theme owl-dot-inner owl-dot-white gutter-no" options={mainSlider20}>
                                                         {
                                                             post.picture.map((item, index) =>
-                                                                <img
+                                                                <Image
                                                                     src={process.env.NEXT_PUBLIC_ASSET_URI + item.url}
                                                                     alt="post gallery"
                                                                     key={item.title + '-' + index}
@@ -156,7 +157,7 @@ function PostSingle() {
                                             <div className="post-author-detail">
                                                 <figure className="author-media">
                                                     <ALink href="#">
-                                                        <img src="./images/blog/comments/1.jpg" alt="avatar" width="50" height="50" />
+                                                        <Image src="./images/blog/comments/1.jpg" alt="avatar" width="50" height="50" />
                                                     </ALink>
                                                 </figure>
                                                 <div className="author-body">
@@ -229,7 +230,7 @@ function PostSingle() {
                                                         <div className="comment">
                                                             <figure className="comment-media">
                                                                 <ALink href="#">
-                                                                    <img src="images/blog/comments/1.jpg" alt="avatar" width="100" height="100" />
+                                                                    <Image src="images/blog/comments/1.jpg" alt="avatar" width="100" height="100" />
                                                                 </ALink>
                                                             </figure>
                                                             <div className="comment-body">
@@ -251,7 +252,7 @@ function PostSingle() {
                                                                         <div className="comment">
                                                                             <figure className="comment-media">
                                                                                 <ALink href="#">
-                                                                                    <img src="images/blog/comments/2.jpg" alt="avatar" width="100" height="100" />
+                                                                                    <Image src="images/blog/comments/2.jpg" alt="avatar" width="100" height="100" />
                                                                                 </ALink>
                                                                             </figure>
 
@@ -278,7 +279,7 @@ function PostSingle() {
                                                         <div className="comment">
                                                             <figure className="comment-media">
                                                                 <ALink href="#">
-                                                                    <img src="images/blog/comments/1.jpg" alt="avatar" width="100" height="100" />
+                                                                    <Image src="images/blog/comments/1.jpg" alt="avatar" width="100" height="100" />
                                                                 </ALink>
                                                             </figure>
 

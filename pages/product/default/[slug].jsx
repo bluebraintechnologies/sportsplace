@@ -3,6 +3,7 @@ import { useRouter } from 'next/router';
 import { useQuery } from '@apollo/react-hooks';
 import Helmet from 'react-helmet';
 import imagesLoaded from 'imagesloaded';
+import Image from 'next/image';
 
 // import withApollo from '~/server/apollo';
 import { GET_PRODUCT } from '~/server/queries';

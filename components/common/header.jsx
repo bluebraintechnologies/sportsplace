@@ -6,6 +6,7 @@ import ALink from '~/components/features/custom-link';
 import CartMenu from '~/components/common/partials/cart-menu';
 //import SearchBox from '~/components/common/partials/search-box';
 import LoginModal from '~/components/features/modals/login-modal';
+import Image from 'next/image';
 
 import { headerBorderRemoveList } from '~/utils/data/menu'
 
@@ -39,7 +40,7 @@ export default function Header(props) {
 
                     <div className="header-center">
                         <ALink href="/" className="logo mr-0">
-                            <img src='./images/home/logo.png' alt="logo" width="154" height="43" />
+                            <Image src='/images/home/logo.png' alt="logo" width="154" height="43" />
                         </ALink>
                     </div>
 
