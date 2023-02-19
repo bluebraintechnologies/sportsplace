@@ -7,7 +7,7 @@ import OwlCarousel from '~/components/features/owl-carousel';
 import { videoHandler } from '~/utils';
 import { mainSlider20 } from '~/utils/data/carousel';
 
-export default function PostTen(props) {
+export default function Post(props) {
     const { post, adClass = 'mb-7', isLazy = false, isOriginal = false, btnText = "Read More", btnAdClass = '', isButton = true } = props;
 
     return (

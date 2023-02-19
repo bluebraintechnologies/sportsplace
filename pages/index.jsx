@@ -1,11 +1,9 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 
-import { useQuery } from "@apollo/react-hooks";
 
 // Import Apollo Server and Query
 //import withApollo from '../server/apollo';
-import { GET_HOME_DATA } from '../server/queries';
 
 // import Home Components
 import NewsletterModal from '~/components/features/modals/newsletter-modal';
@@ -29,30 +27,17 @@ function HomePage() {
             <Helmet>
                 <title>Agway Sports Private Limited</title>
             </Helmet>
-
-
             <h1 className="d-none">Agway Sports Private Limited - Home</h1>
-
             <div className="page-content">
-
                 <IntroSection />
-
                 <BannerGrid />
-
                 <div className="container">
-
                     <ProductCollection featured={featured} bestSelling={bestSelling} onSale={onSale} loading={loading} />
-
                     <BrandSection />
-
                 </div>
-
                 <CtaSection />
-
                 <BlogSection posts={posts} />
-
             </div>
-
             <NewsletterModal />
         </div>
     )

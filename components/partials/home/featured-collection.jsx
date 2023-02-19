@@ -1,6 +1,6 @@
 import React from 'react';
 
-import ProductNine from '~/components/features/product/product-nine';
+import Product from '~/components/features/product/product';
 
 function FeaturedCollection(props) {
     const { products, loading } = props;
@@ -20,13 +20,13 @@ function FeaturedCollection(props) {
                     <div className="row gutter-sm">
                         <div className="col-md-6">
                             {
-                                products && <ProductNine product={products[0]} adClass="product-lg" lgImage={true} />
+                                products && <Product product={products[0]} adClass="product-lg" lgImage={true} />
                             }
                         </div>
                         <div className="col-6 col-md-3 order-md-first">
                             {
                                 products && products.slice(1, 3).map((item, index) =>
-                                    <ProductNine
+                                    <Product
                                         product={item}
                                         key={`top-selling-product ${index}`}
                                     />
@@ -36,7 +36,7 @@ function FeaturedCollection(props) {
                         <div className="col-6 col-md-3">
                             {
                                 products && products.slice(3, 5).map((item, index) =>
-                                    <ProductNine
+                                    <Product
                                         product={item}
                                         key={`top-selling-product ${index}`}
                                     />

@@ -3,7 +3,7 @@ import Reveal from 'react-awesome-reveal';
 
 import OwlCarousel from '~/components/features/owl-carousel';
 
-import PostTen from '~/components/features/post/post-ten';
+import Post from '~/components/features/post';
 
 import { fadeInRightShorter } from '~/utils/data/keyframes';
 import { mainSlider5 } from '~/utils/data/carousel';
@@ -21,7 +21,7 @@ function BlogSection(props) {
                         posts.slice(15, 19).map((post, index) => (
                             <Reveal keyframes={fadeInRightShorter} duration={1000} triggerOnce key={"post-eight" + index}>
                                 <div className="blog-post mb-4">
-                                    <PostTen post={post} isOriginal={true} />
+                                    <Post post={post} isOriginal={true} />
                                 </div>
                             </Reveal>
                         )) : ''

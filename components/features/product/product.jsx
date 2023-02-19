@@ -9,7 +9,7 @@ import { toDecimal } from '~/utils';
 
 import ALink from '~/components/features/custom-link';
 
-function ProductNine(props) {
+function Product(props) {
     const { product, adClass = 'text-center', toggleWishlist, wishlist, addToCart, openQuickview, lgImage } = props;
 
     // decide if the product is wishlisted
@@ -135,4 +135,4 @@ function mapStateToProps(state) {
     }
 }
 
-export default connect(mapStateToProps, { toggleWishlist: wishlistActions.toggleWishlist, addToCart: cartActions.addToCart, ...modalActions })(ProductNine);
+export default connect(mapStateToProps, { toggleWishlist: wishlistActions.toggleWishlist, addToCart: cartActions.addToCart, ...modalActions })(Product);
