@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import { useQuery } from '@apollo/react-hooks';
-import InputRange from 'react-input-range';
 
 import ALink from '~/components/features/custom-link';
 import Card from '~/components/features/accordion/card';
@@ -11,8 +10,6 @@ import SmallProduct from '~/components/features/product/product-sm';
 
 import withApollo from '../../../../server/apollo';
 import { GET_SHOP_SIDEBAR_DATA } from '../../../../server/queries';
-
-import SlideToggle from 'react-slide-toggle';
 
 import filterData from '~/utils/data/shop';
 import { scrollTopHandler } from '~/utils';
@@ -34,7 +31,7 @@ function SidebarFilterOne(props) {
         return () => {
             window.removeEventListener('resize', hideSidebar);
         }
-    }, [])
+    }, [hideSidebar])
 
     useEffect(() => {
         setPrice({ max: query.max_price ? parseInt(query.max_price) : 1000, min: query.min_price ? parseInt(query.min_price) : 0 });
@@ -43,7 +40,7 @@ function SidebarFilterOne(props) {
         } else {
             scrollTopHandler();
         }
-    }, [query])
+    }, [query, isFirst])
 
     const filterByPrice = (e) => {
         e.preventDefault();
@@ -140,7 +137,7 @@ function SidebarFilterOne(props) {
                                                         key={item.name + ' - ' + index}
                                                         className={`with-ul overflow-hidden ${item.slug === query.category || item.children.findIndex(subCat => subCat.slug === query.category) > -1 ? 'show' : ''} `}
                                                     >
-                                                        <SlideToggle collapsed={true} >
+                                                        {/*  <SlideToggle collapsed={true} >
                                                             {({ onToggle, setCollapsibleElement, toggleState }) => (
                                                                 <>
                                                                     <ALink href={{ pathname: router.pathname, query: { category: item.slug, grid: query.grid, type: router.query.type ? router.query.type : null } }} scroll={false}>{item.name}
@@ -162,7 +159,7 @@ function SidebarFilterOne(props) {
                                                                     </div>
                                                                 </>
                                                             )}
-                                                        </SlideToggle >
+                                                        </SlideToggle > */}
                                                     </li> :
                                                     <li
                                                         className={query.category === item.slug ? 'show' : ''}
@@ -182,14 +179,14 @@ function SidebarFilterOne(props) {
                                     <div className="widget-body">
                                         <form action="#">
                                             <div className="filter-price-slider noUi-target noUi-ltr noUi-horizontal shop-input-range">
-                                                <InputRange
+                                                {/* <InputRange
                                                     formatLabel={value => `$${value}`}
                                                     maxValue={1000}
                                                     minValue={0}
                                                     step={50}
                                                     value={filterPrice}
                                                     onChange={onChangePrice}
-                                                />
+                                                /> */}
                                             </div>
 
                                             <div className="filter-actions">

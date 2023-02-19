@@ -4,7 +4,6 @@ import { useQuery } from '@apollo/react-hooks';
 import Helmet from 'react-helmet';
 import imagesLoaded from 'imagesloaded';
 import Image from 'next/image';
-
 // import withApollo from '~/server/apollo';
 import { GET_PRODUCT } from '~/server/queries';
 
@@ -21,12 +20,10 @@ import { mainSlider17 } from '~/utils/data/carousel';
 import ProductNav from '~/components/partials/product/product-nav';
 
 function ProductRightSidebar() {
-    const slug = useRouter().query.slug;
 
-    if (!slug) return '';
-
-    const { data, loading, error } = useQuery(GET_PRODUCT, { variables: { slug } });
     const [loaded, setLoadingState] = useState(false);
+
+    const { data, loading, error } = [{}, false, '']; //useQuery(GET_PRODUCT, { variables: { slug } });
     const product = data && data.product.data;
     const related = data && data.product.related;
 
@@ -39,7 +36,11 @@ function ProductRightSidebar() {
             });
         if (loading)
             setLoadingState(false)
-    }, [loading, product])
+    }, [loading, product]);
+
+    const slug = useRouter().query.slug;
+
+    if (!slug) return null;
 
     return (
         <main className="main single-product">

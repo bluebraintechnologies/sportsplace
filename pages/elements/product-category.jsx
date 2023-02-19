@@ -40,7 +40,7 @@ function Cta() {
                                         </figure>
                                     </ALink>
                                     <div className="category-content">
-                                        <h4 className="category-name"><ALink href="shop.html">For Men's</ALink></h4>
+                                        <h4 className="category-name"><ALink href="shop.html">For Mens</ALink></h4>
                                         <ALink href="#" className="btn btn-primary">Shop Now</ALink>
                                     </div>
                                 </div>
@@ -78,7 +78,7 @@ function Cta() {
                                         </figure>
                                     </ALink>
                                     <div className="category-content">
-                                        <h4 className="category-name"><ALink href="shop.html">Fashionable Women's</ALink></h4>
+                                        <h4 className="category-name"><ALink href="shop.html">Fashionable Womens</ALink></h4>
                                         <ALink href="#" className="btn btn-primary">Shop Now</ALink>
                                     </div>
                                 </div>
@@ -123,7 +123,7 @@ function Cta() {
                                 </ALink>
 
                                 <div className="category-content">
-                                    <h4 className="category-name"><ALink href="#">For Men's</ALink></h4>
+                                    <h4 className="category-name"><ALink href="#">For Mens</ALink></h4>
                                 </div>
                             </div>
 
@@ -364,7 +364,7 @@ function Cta() {
                                         height="280" />
                                 </figure>
                                 <div className="category-content">
-                                    <h4 className="category-name">Women's Collection</h4>
+                                    <h4 className="category-name">Womens Collection</h4>
                                     <span className="category-count">1 Products</span>
                                 </div>
                             </div>
@@ -384,7 +384,7 @@ function Cta() {
                                         height="280" />
                                 </figure>
                                 <div className="category-content">
-                                    <h4 className="category-name">For Men's</h4>
+                                    <h4 className="category-name">For Mens</h4>
                                     <span className="category-count">0 Products</span>
                                 </div>
                             </div>
@@ -446,9 +446,9 @@ function Cta() {
                                     <ul className="category-list">
                                         <li><ALink href="#">Accessories</ALink></li>
                                         <li><ALink href="#">Bags &amp; Backpacks</ALink></li>
-                                        <li><ALink href="#">Men's</ALink></li>
+                                        <li><ALink href="#">Mens</ALink></li>
                                         <li><ALink href="#">Shoes &amp; Boots</ALink></li>
-                                        <li><ALink href="#">Women’s</ALink></li>
+                                        <li><ALink href="#">Womens</ALink></li>
                                     </ul>
                                 </div>
                             </div>
@@ -494,7 +494,7 @@ function Cta() {
                                     <ul className="category-list">
                                         <li><ALink href="#">Accessories</ALink></li>
                                         <li><ALink href="#">Bracelets</ALink></li>
-                                        <li><ALink href="#">Men's Necklace</ALink></li>
+                                        <li><ALink href="#">Mens Necklace</ALink></li>
                                         <li><ALink href="#">Pendant</ALink></li>
                                         <li><ALink href="#">Sale</ALink></li>
                                         <li><ALink href="#">Watch</ALink></li>
@@ -514,10 +514,10 @@ function Cta() {
                                     <ul className="category-list">
                                         <li><ALink href="#">Accessories</ALink></li>
                                         <li><ALink href="#">Gloves</ALink></li>
-                                        <li><ALink href="#">Men's</ALink></li>
+                                        <li><ALink href="#">Mens</ALink></li>
                                         <li><ALink href="#">Shoes</ALink></li>
                                         <li><ALink href="#">Training Shirt</ALink></li>
-                                        <li><ALink href="#">Women's</ALink></li>
+                                        <li><ALink href="#">Womens</ALink></li>
                                     </ul>
                                 </div>
                             </div>
@@ -534,10 +534,10 @@ function Cta() {
                                     <ul className="category-list">
                                         <li><ALink href="#">Fashion Bags</ALink></li>
                                         <li><ALink href="#">Hand Bags</ALink></li>
-                                        <li><ALink href="#">Kid's Bags</ALink></li>
-                                        <li><ALink href="#">Men's Bags</ALink></li>
+                                        <li><ALink href="#">Kids Bags</ALink></li>
+                                        <li><ALink href="#">Mens Bags</ALink></li>
                                         <li><ALink href="#">Trip Bags</ALink></li>
-                                        <li><ALink href="#">Women's</ALink></li>
+                                        <li><ALink href="#">Womens</ALink></li>
                                     </ul>
                                 </div>
                             </div>
@@ -587,7 +587,7 @@ function Cta() {
                                     </ALink>
 
                                     <div className="category-content">
-                                        <h4 className="category-name">For Men's Fashion</h4>
+                                        <h4 className="category-name">For Mens Fashion</h4>
                                         <span className="category-count">
                                             <span>25</span> Products
                                         </span>

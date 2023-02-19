@@ -23,7 +23,7 @@ function PostSingle() {
 
     if (!slug) return '';
 
-    const { data, loading, error } = useQuery(GET_POST, { variables: { slug } });
+    const { data, loading, error } = [{}, false, ''];//useQuery(GET_POST, { variables: { slug } });
     const post = data && data.post.data;
 
     const related = data && data.post.related;

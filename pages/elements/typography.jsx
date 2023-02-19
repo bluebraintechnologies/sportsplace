@@ -22,14 +22,14 @@ function Typography() {
                         <div className="title-wrapper">
                             <h2 className="title title-center mb-2">Headers</h2>
                             <p className="text-body text-center mb-2">We provide some basic styling to header tags. For
-                                example,<br /> you can see 6 header tags' different sizes.</p>
+                                example,<br /> you can see 6 header tags different sizes.</p>
                         </div>
 
                         <div className="row">
                             <div className="col-md-6">
                                 <h1 className="text-uppercase mb-3">Heading h1</h1>
                                 <p className="mb-6">Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum.
-                                Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum
+                                    Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum
                                     lacinia arcu eget </p>
                                 <h2 className="text-uppercase">Heading h2</h2>
                                 <h3 className="text-uppercase">Heading h3</h3>
@@ -40,7 +40,7 @@ function Typography() {
                             <div className="col-md-6">
                                 <h1 className="font-weight-bold mb-3">Heading h1</h1>
                                 <p className="mb-6">Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum.
-                                Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum
+                                    Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum
                                     lacinia arcu eget </p>
                                 <h2 className="font-weight-bold">Heading h2</h2>
                                 <h3 className="font-weight-bold">Heading h3</h3>
@@ -54,9 +54,9 @@ function Typography() {
                         <h2 className="title title-center mb-4">Description With List</h2>
                         <div className="font-primary ">
                             <p className="mb-3">Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent
-                            mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu
-                            eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
-                            inceptos himenaeos. Curabitur sodales ligula in libero. Vestibulum lacinia arcu eget
+                                mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu
+                                eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+                                inceptos himenaeos. Curabitur sodales ligula in libero. Vestibulum lacinia arcu eget
                                 nulla. Class aptent taciti sociosqu </p>
                             <div className="row">
                                 <div className="col-md-6">
@@ -88,8 +88,8 @@ function Typography() {
                             <div className="col-md-6">
                                 <blockquote className="text-bd-left">
                                     <p>Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris.
-                                    Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu
-                                    eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra,
+                                        Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu
+                                        eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra,
                                         per inceptos </p>
                                 </blockquote>
 
@@ -97,8 +97,8 @@ function Typography() {
                             <div className="col-md-6">
                                 <blockquote className="text-bd-left">
                                     <p>Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris.
-                                    Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu
-                                    eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra.
+                                        Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu
+                                        eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra.
                                     </p>
                                 </blockquote>
                             </div>
@@ -112,4 +112,4 @@ function Typography() {
     )
 }
 
-export default React.memo( Typography );
+export default React.memo(Typography);

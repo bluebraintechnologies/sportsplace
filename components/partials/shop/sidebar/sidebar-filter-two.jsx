@@ -33,7 +33,7 @@ function SidebarFilterTwo() {
         } else {
             scrollTopHandler();
         }
-    }, [query])
+    }, [query, isFirst])
 
     const containsAttrInUrl = (type, value) => {
         const currentQueries = query[type] ? query[type].split(',') : [];
